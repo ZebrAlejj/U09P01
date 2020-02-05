@@ -32,6 +32,7 @@ function getCharacters(search) {
                     done(response.data.results);
                 },
                 error: () => {
+                    $('#characters').empty();
                     $('#characters').append('<p>Ha ocurrido un error</p>');
                 }
             });
@@ -67,6 +68,7 @@ function getComics(search) {
                     done(response.data.results);
                 },
                 error: () => {
+                    $('#comics').empty();
                     $('#comics').append('<p>Ha ocurrido un error</p>');
                 }
             });
