@@ -80,19 +80,6 @@ function getComics(search) {
             printComics(data);
         }
     })
-    // $.ajax({
-    //     url: "https://gateway.marvel.com:443/v1/public/comics?" + path + "apikey=" + key,
-    //     type: "GET",
-    //     beforeStart: () => {
-    //         spinner.show();
-    //     },
-    //     complete: () => {
-    //         spinner.hide();
-    //     },
-    //     success: function (response) {
-    //         printComics(response);
-    //     }
-    // });
 }
 
 function printCharacters(response) {
