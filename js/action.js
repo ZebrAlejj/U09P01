@@ -32,7 +32,7 @@ function getCharacters(search) {
                     done(response.data.results);
                 },
                 error: () => {
-                    this.append('<p>Ups!</p>');
+                    $('#characters').append('<p>Ha ocurrido un error</p>');
                 }
             });
         },
@@ -67,7 +67,7 @@ function getComics(search) {
                     done(response.data.results);
                 },
                 error: () => {
-                    this.append('<p>Ups!</p>');
+                    $('#comics').append('<p>Ha ocurrido un error</p>');
                 }
             });
         },
