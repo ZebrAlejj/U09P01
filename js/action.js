@@ -32,7 +32,7 @@ function getCharacters(search) {
                     done(response.data.results);
                 },
                 error: () => {
-                    this.append('<p>Ups!</p>');
+                    $('#characters').append('<p>Ha ocurrido un error</p>');
                 }
             });
         },
@@ -67,7 +67,7 @@ function getComics(search) {
                     done(response.data.results);
                 },
                 error: () => {
-                    this.append('<p>Ups!</p>');
+                    $('#comics').append('<p>Ha ocurrido un error</p>');
                 }
             });
         },
@@ -80,19 +80,6 @@ function getComics(search) {
             printComics(data);
         }
     })
-    // $.ajax({
-    //     url: "https://gateway.marvel.com:443/v1/public/comics?" + path + "apikey=" + key,
-    //     type: "GET",
-    //     beforeStart: () => {
-    //         spinner.show();
-    //     },
-    //     complete: () => {
-    //         spinner.hide();
-    //     },
-    //     success: function (response) {
-    //         printComics(response);
-    //     }
-    // });
 }
 
 function printCharacters(response) {
